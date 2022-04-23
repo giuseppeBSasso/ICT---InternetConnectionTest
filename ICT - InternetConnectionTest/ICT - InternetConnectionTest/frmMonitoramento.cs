@@ -20,8 +20,6 @@ namespace ICT___InternetConnectionTest
         public frmMonitoramento()
         {
             InitializeComponent();
-            // cboCategoria1();
-            //  preenchendoComboBox();
             ControleDePermissoes();
         }
 
@@ -40,10 +38,6 @@ namespace ICT___InternetConnectionTest
             }
         }
 
-        //Chamando Conexão BD MYSQL
-     /*   ConnectionToMysql conexao = new ConnectionToMysql();
-        MySqlCommand cmd = new MySqlCommand();*/
-
         //Carregando informações no combobox tempo de atualização
         private void preenchendoComboBox()
         {
@@ -51,55 +45,7 @@ namespace ICT___InternetConnectionTest
             comboBoxTimePing.Items.Add("10 - Segundos");
         }
 
-        //Carregando informações do BD no combobox categoria 
-        void cboCategoria1()
-        {
-          /*  try
-            {
-                cmd.Connection = conexao.conectar();
-                cmd.CommandText = "select *from category";
-                DataSet ds = new DataSet();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(ds);
-                comboBoxCategoria1.DataSource = ds.Tables[0];
-                comboBoxCategoria1.DisplayMember = "category_name";
-                comboBoxCategoria1.ValueMember = "id_category";
-                conexao.desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "ERRO MYSQL");
-            }*/
-        }
-
         private void frmDashboard_Load(object sender, EventArgs e) { }
-
-        //Metodo de listagem de informações no DataGridView (Tabela)
-        private void Carregando()
-        {
-           /* try
-            {
-                cmd.Connection = conexao.conectar();
-
-                cmd.CommandText = "SELECT id_devices, ip_address, description from devices where category_id = " + comboBoxCategoria1.SelectedValue;
-
-                DataTable dt = new DataTable();
-
-                MySqlDataAdapter dados = new MySqlDataAdapter();
-
-                dados.SelectCommand = cmd;
-
-                dados.Fill(dt);
-
-                this.dgDados.DataSource = dt;
-
-                conexao.desconectar();
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message, ex.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
-        }
 
 
         //Metodo que efetua o ping em informações da tabela
@@ -121,7 +67,6 @@ namespace ICT___InternetConnectionTest
             int aux01 = 0;
             foreach (string item in (List<string>)inteiros)
             {
-
                 Ping ping = new Ping();
                 PingReply replay = ping.Send(item.ToString(), 1000);
 
@@ -136,8 +81,7 @@ namespace ICT___InternetConnectionTest
                     dgDados.Rows[aux01].Cells["STATUS"].Value = "ONLINE";
                 }
                 else
-                {
-                    
+                {                  
                     dgDados.Rows[aux01].DefaultCellStyle.BackColor = Color.Red;
                     dgDados.Rows[aux01].DefaultCellStyle.ForeColor = Color.White;
 
@@ -150,13 +94,6 @@ namespace ICT___InternetConnectionTest
             }
         }
 
-        //Botão, Metodo para chamar categoria e pingar na mesma
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Carregando();
-            pingando();
-        }
-
         //Evento de tempo, controlando quando e executado o metodo ping
         private void timer1_Tick_1(object sender, EventArgs e)
         {
@@ -166,7 +103,6 @@ namespace ICT___InternetConnectionTest
         //Combobox tempo de atualização 
         private void comboBoxTimePing_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
             if (comboBoxTimePing.SelectedItem == "10 - Segundos")
             {
                 timer1.Interval = 10000;
@@ -181,8 +117,8 @@ namespace ICT___InternetConnectionTest
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-          //  frmAdicionarItem In = new frmAdicionarItem();
-           // In.ShowDialog();
+            frmAdicionarItem In = new frmAdicionarItem();
+            In.ShowDialog();
         }
 
         private void btnEncerrar_Click(object sender, EventArgs e)
@@ -193,11 +129,49 @@ namespace ICT___InternetConnectionTest
         private void frmMonitoramento_Load(object sender, EventArgs e)
         {
             MostrarDispositivos();
+            preenchendoComboBox();
+            CarregandoProgressBar();
         }
 
+        //Lista informações no datagrid
         private void MostrarDispositivos()
         {
             dgDados.DataSource = objetoDM.MostrarDevices();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity < 1) this.Opacity += 0.05;
+            progressBarPing.Value += 1;
+            if (progressBarPing.Value == 100)
+            {
+                timer2.Stop();
+                pingando();
+                timer3.Start();
+                lblCarregandoInfo.Text = "INFORMAÇÕES CARREGADAS!";
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            this.Opacity -= 0.1;
+            if (this.Opacity == 0)
+            {
+                timer3.Stop();
+               //this.progressBarPing.Visible = false;
+            }
+        }
+
+        private void CarregandoProgressBar()
+        {
+            lblCarregandoInfo.Visible = true;
+            this.Opacity = 0.0;
+            progressBarPing.Value = 0;
+            progressBarPing.Minimum = 0;
+            progressBarPing.Maximum = 100;
+
+            timer2.Start();
+            progressBarPing.Show();
         }
     }
 }

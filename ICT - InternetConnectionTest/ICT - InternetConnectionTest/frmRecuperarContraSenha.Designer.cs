@@ -116,6 +116,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecuperarContraSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecuperarContraSenha";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmRecuperarContraSenha_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();

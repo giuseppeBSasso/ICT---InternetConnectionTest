@@ -11,11 +11,8 @@ namespace DataAccess.MysqlServer
 {
     public class DevicesDados : ConnectionToMysql
     {
-        //private DevicesDados conectar = new DevicesDados();
-      //  MySqlDataReader leer;
         DataTable tabela = new DataTable();
         MySqlDataAdapter dados = new MySqlDataAdapter();
-      //  MySqlConnection conec = new MySqlConnection("server=localhost; database = ict_bd; username=root; password=;");
 
         public DataTable Mostrar()
         {
@@ -23,14 +20,11 @@ namespace DataAccess.MysqlServer
             {
                 connection.Open();
                 using (var command = new MySqlCommand())
-                {
-                    
+                {   
                     command.Connection = connection;
                     command.CommandText = "Select *from devices";
                     dados.SelectCommand = command;
                     dados.Fill(tabela);
-                  //  leer = command.ExecuteReader();
-                  //  tabela.Load(dados);
                     return tabela;
                 }
             }

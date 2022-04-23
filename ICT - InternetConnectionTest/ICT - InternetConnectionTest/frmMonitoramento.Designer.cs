@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgDados = new System.Windows.Forms.DataGridView();
             this.id_devices = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ip_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +43,13 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.comboBoxCategoria1 = new System.Windows.Forms.ComboBox();
             this.comboBoxTimePing = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.btnEncerrar = new System.Windows.Forms.Button();
+            this.progressBarPing = new System.Windows.Forms.ProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.lblCarregandoInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,14 +65,14 @@
             this.dgDados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgDados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgDados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgDados.ColumnHeadersHeight = 30;
             this.dgDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_devices,
@@ -80,28 +82,28 @@
             this.ttl,
             this.bufferSize,
             this.STATUS});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDados.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDados.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgDados.EnableHeadersVisualStyles = false;
             this.dgDados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dgDados.Location = new System.Drawing.Point(12, 55);
             this.dgDados.Name = "dgDados";
             this.dgDados.ReadOnly = true;
             this.dgDados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.PaleVioletRed;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgDados.Size = new System.Drawing.Size(752, 375);
             this.dgDados.TabIndex = 0;
             // 
@@ -200,18 +202,10 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // comboBoxCategoria1
-            // 
-            this.comboBoxCategoria1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBoxCategoria1.FormattingEnabled = true;
-            this.comboBoxCategoria1.Location = new System.Drawing.Point(132, 511);
-            this.comboBoxCategoria1.Name = "comboBoxCategoria1";
-            this.comboBoxCategoria1.Size = new System.Drawing.Size(142, 21);
-            this.comboBoxCategoria1.TabIndex = 10;
-            // 
             // comboBoxTimePing
             // 
             this.comboBoxTimePing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxTimePing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxTimePing.FormattingEnabled = true;
             this.comboBoxTimePing.Location = new System.Drawing.Point(761, 512);
             this.comboBoxTimePing.Name = "comboBoxTimePing";
@@ -223,21 +217,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(12, 509);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 24);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "LISTAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEncerrar
             // 
@@ -255,16 +234,49 @@
             this.btnEncerrar.UseVisualStyleBackColor = true;
             this.btnEncerrar.Click += new System.EventHandler(this.btnEncerrar_Click);
             // 
+            // progressBarPing
+            // 
+            this.progressBarPing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBarPing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.progressBarPing.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.progressBarPing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.progressBarPing.Location = new System.Drawing.Point(12, 512);
+            this.progressBarPing.Name = "progressBarPing";
+            this.progressBarPing.Size = new System.Drawing.Size(415, 21);
+            this.progressBarPing.TabIndex = 18;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // lblCarregandoInfo
+            // 
+            this.lblCarregandoInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCarregandoInfo.AutoSize = true;
+            this.lblCarregandoInfo.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblCarregandoInfo.ForeColor = System.Drawing.Color.White;
+            this.lblCarregandoInfo.Location = new System.Drawing.Point(9, 496);
+            this.lblCarregandoInfo.Name = "lblCarregandoInfo";
+            this.lblCarregandoInfo.Size = new System.Drawing.Size(476, 13);
+            this.lblCarregandoInfo.TabIndex = 19;
+            this.lblCarregandoInfo.Text = "CARREGANDO INFORMAÇÕES DE CONEXÃO COM EQUIPAMENTOS ! AGUARDE !";
+            this.lblCarregandoInfo.Visible = false;
+            // 
             // frmMonitoramento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(920, 545);
+            this.Controls.Add(this.lblCarregandoInfo);
+            this.Controls.Add(this.progressBarPing);
             this.Controls.Add(this.btnEncerrar);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBoxTimePing);
-            this.Controls.Add(this.comboBoxCategoria1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNovo);
@@ -275,6 +287,7 @@
             this.Load += new System.EventHandler(this.frmMonitoramento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgDados)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -283,10 +296,8 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ComboBox comboBoxCategoria1;
         private System.Windows.Forms.ComboBox comboBoxTimePing;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEncerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_devices;
         private System.Windows.Forms.DataGridViewTextBoxColumn ip_address;
@@ -295,5 +306,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ttl;
         private System.Windows.Forms.DataGridViewTextBoxColumn bufferSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
+        private System.Windows.Forms.ProgressBar progressBarPing;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Label lblCarregandoInfo;
     }
 }
