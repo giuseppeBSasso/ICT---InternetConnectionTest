@@ -26,5 +26,10 @@ namespace Domain
         {
             obj.Inserir(ip_address, description, category_id);
         }
+
+        public void EditarDados(string ip_address, string description, string category_id,string id_devices)
+        {
+            obj.Editar(ip_address, description, category_id,Convert.ToInt32(id_devices));
+        }
     }
 }

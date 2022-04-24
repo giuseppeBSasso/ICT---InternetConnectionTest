@@ -47,5 +47,24 @@ namespace DataAccess.MysqlServer
                 }
             }
         }
+
+        public void Editar(string ip_address, string description, string category_id,int id_devices)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new MySqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "update devices set ip_address=@ip_address,description=@description,category_id=@category_id where id_devices=@id_devices";
+                    command.Parameters.AddWithValue("@ip_address", ip_address);
+                    command.Parameters.AddWithValue("@description", description);
+                    command.Parameters.AddWithValue("@category_id", category_id);
+                    command.Parameters.AddWithValue("@id_devices", id_devices);
+                    command.CommandType = System.Data.CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

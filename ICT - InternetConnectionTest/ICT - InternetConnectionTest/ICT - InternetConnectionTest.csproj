@@ -62,6 +62,12 @@
     <Compile Include="frmBemVindo.Designer.cs">
       <DependentUpon>frmBemVindo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarItem.Designer.cs">
+      <DependentUpon>frmEditarItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBemVindo.resx">
       <DependentUpon>frmBemVindo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarItem.resx">
+      <DependentUpon>frmEditarItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>

@@ -174,5 +174,23 @@ namespace ICT___InternetConnectionTest
             timer2.Start();
             progressBarPing.Show();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmEditarItem frm = new frmEditarItem();
+            if (dgDados.SelectedRows.Count > 0)
+            {
+                frm.txtid.Text = dgDados.CurrentRow.Cells["id_devices"].Value.ToString();
+                frm.textBoxIP.Text = dgDados.CurrentRow.Cells["ip_address"].Value.ToString();
+                frm.textBoxDescricao.Text = dgDados.CurrentRow.Cells["description"].Value.ToString();
+                frm.txtCategoria.Text = dgDados.CurrentRow.Cells["category_id"].Value.ToString();
+
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fila para editar!");
+            }
+        }
     }
 }
