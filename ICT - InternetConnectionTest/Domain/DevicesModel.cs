@@ -21,5 +21,10 @@ namespace Domain
             tabela = obj.Mostrar();
             return tabela;
         }
+
+        public void InserirDados(string ip_address, string description, string category_id)
+        {
+            obj.Inserir(ip_address, description, category_id);
+        }
     }
 }

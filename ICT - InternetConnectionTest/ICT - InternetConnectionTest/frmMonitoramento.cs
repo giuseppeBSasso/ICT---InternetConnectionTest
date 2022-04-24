@@ -134,9 +134,10 @@ namespace ICT___InternetConnectionTest
         }
 
         //Lista informações no datagrid
-        private void MostrarDispositivos()
+        public void MostrarDispositivos()
         {
-            dgDados.DataSource = objetoDM.MostrarDevices();
+            DevicesModel objeto = new DevicesModel();
+            dgDados.DataSource = objeto.MostrarDevices();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

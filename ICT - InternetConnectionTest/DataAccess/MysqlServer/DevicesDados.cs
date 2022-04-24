@@ -29,5 +29,23 @@ namespace DataAccess.MysqlServer
                 }
             }
         }
+
+        public void Inserir(string ip_address,string description,string category_id)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new MySqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "insert into devices(ip_address, description, category_id)values(@ip_address, @description, @category_id)";
+                    command.Parameters.AddWithValue("@ip_address", ip_address);
+                    command.Parameters.AddWithValue("@description", description);
+                    command.Parameters.AddWithValue("@category_id", category_id);
+                    command.CommandType = System.Data.CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

@@ -38,10 +38,9 @@
             this.textBoxDescricao = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAdicionarCategoria = new System.Windows.Forms.Button();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -155,16 +154,6 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "SALVAR";
             // 
-            // comboBoxCategoria
-            // 
-            this.comboBoxCategoria.BackColor = System.Drawing.Color.DimGray;
-            this.comboBoxCategoria.ForeColor = System.Drawing.Color.White;
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(187, 173);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(244, 21);
-            this.comboBoxCategoria.TabIndex = 23;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -190,28 +179,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // btnAdicionarCategoria
+            // txtCategoria
             // 
-            this.btnAdicionarCategoria.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnAdicionarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionarCategoria.Location = new System.Drawing.Point(219, 200);
-            this.btnAdicionarCategoria.Name = "btnAdicionarCategoria";
-            this.btnAdicionarCategoria.Size = new System.Drawing.Size(180, 27);
-            this.btnAdicionarCategoria.TabIndex = 25;
-            this.btnAdicionarCategoria.Text = "ADICIONAR CATEGORIA";
-            this.btnAdicionarCategoria.UseVisualStyleBackColor = false;
-            this.btnAdicionarCategoria.Click += new System.EventHandler(this.btnAdicionarCategoria_Click);
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(187, 173);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(244, 23);
+            this.txtCategoria.TabIndex = 25;
             // 
             // frmAdicionarItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 255);
-            this.Controls.Add(this.btnAdicionarCategoria);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -245,9 +227,8 @@
         public System.Windows.Forms.TextBox textBoxIP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEncerrar;
-        private System.Windows.Forms.Button btnAdicionarCategoria;
+        public System.Windows.Forms.TextBox txtCategoria;
     }
 }
