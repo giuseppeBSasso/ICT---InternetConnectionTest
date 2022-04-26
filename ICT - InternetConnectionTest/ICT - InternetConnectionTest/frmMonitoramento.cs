@@ -16,6 +16,7 @@ namespace ICT___InternetConnectionTest
     public partial class frmMonitoramento : Form
     {
         DevicesModel objetoDM = new DevicesModel();
+        private string IdDados = null;
 
         public frmMonitoramento()
         {
@@ -41,8 +42,8 @@ namespace ICT___InternetConnectionTest
         //Carregando informações no combobox tempo de atualização
         private void preenchendoComboBox()
         {
-            comboBoxTimePing.Items.Add("5 - Segundo");
-            comboBoxTimePing.Items.Add("10 - Segundos");
+            comboBoxTimePing.Items.Add("25 - Segundos");
+            comboBoxTimePing.Items.Add("60 - Segundos");
         }
 
         private void frmDashboard_Load(object sender, EventArgs e) { }
@@ -103,14 +104,14 @@ namespace ICT___InternetConnectionTest
         //Combobox tempo de atualização 
         private void comboBoxTimePing_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (comboBoxTimePing.SelectedItem == "10 - Segundos")
+            if (comboBoxTimePing.SelectedItem == "25 - Segundos")
             {
-                timer1.Interval = 10000;
+                timer1.Interval = 20000;
                 timer1.Start();
             }
-            else if (comboBoxTimePing.SelectedItem == "5 - Segundo")
+            else if (comboBoxTimePing.SelectedItem == "60 - Segundos")
             {
-                timer1.Interval = 5000;
+                timer1.Interval = 60000;
                 timer1.Start();
             }
         }
@@ -146,8 +147,8 @@ namespace ICT___InternetConnectionTest
             progressBarPing.Value += 1;
             if (progressBarPing.Value == 100)
             {
-                timer2.Stop();
                 pingando();
+                timer2.Stop();
                 timer3.Start();
                 lblCarregandoInfo.Text = "INFORMAÇÕES CARREGADAS!";
             }
@@ -159,7 +160,7 @@ namespace ICT___InternetConnectionTest
             if (this.Opacity == 0)
             {
                 timer3.Stop();
-               //this.progressBarPing.Visible = false;
+                //this.progressBarPing.Visible = false;
             }
         }
 
@@ -186,6 +187,21 @@ namespace ICT___InternetConnectionTest
                 frm.txtCategoria.Text = dgDados.CurrentRow.Cells["category_id"].Value.ToString();
 
                 frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fila para editar!");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgDados.SelectedRows.Count > 0)
+            {
+                IdDados = dgDados.CurrentRow.Cells["id_devices"].Value.ToString();
+                objetoDM.EliminarDados(IdDados);
+                MessageBox.Show("Item deletado com sucesso!");
+                MostrarDispositivos();
             }
             else
             {

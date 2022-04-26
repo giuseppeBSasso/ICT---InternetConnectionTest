@@ -44,6 +44,7 @@ namespace DataAccess.MysqlServer
                     command.Parameters.AddWithValue("@category_id", category_id);
                     command.CommandType = System.Data.CommandType.Text;
                     command.ExecuteNonQuery();
+                    command.Parameters.Clear();
                 }
             }
         }
@@ -63,6 +64,24 @@ namespace DataAccess.MysqlServer
                     command.Parameters.AddWithValue("@id_devices", id_devices);
                     command.CommandType = System.Data.CommandType.Text;
                     command.ExecuteNonQuery();
+                    command.Parameters.Clear();
+                }
+            }
+        }
+
+        public void Deletar(int id_devices)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new MySqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "delete from devices where id_devices=@id_devices";
+                    command.Parameters.AddWithValue("@id_devices", id_devices);
+                    command.CommandType = System.Data.CommandType.Text;
+                    command.ExecuteNonQuery();
+                    command.Parameters.Clear();
                 }
             }
         }

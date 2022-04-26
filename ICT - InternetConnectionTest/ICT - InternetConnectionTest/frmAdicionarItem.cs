@@ -33,6 +33,7 @@ namespace ICT___InternetConnectionTest
             {
                 objetoDM.InserirDados(textBoxIP.Text, textBoxDescricao.Text, txtCategoria.Text);
                 MessageBox.Show("Dados cadastrados com sucesso!");
+                LimparFrm();
                 //Atualizar dados do datagridview
             }
             catch(Exception ex)
@@ -50,6 +51,14 @@ namespace ICT___InternetConnectionTest
         private void btnEncerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LimparFrm()
+        {
+            textBoxDescricao.Clear();
+            textBoxIP.Clear();
+            txtCategoria.Clear();
+            txtid.Clear();
         }
     }
 }

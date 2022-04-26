@@ -31,5 +31,10 @@ namespace Domain
         {
             obj.Editar(ip_address, description, category_id,Convert.ToInt32(id_devices));
         }
+
+        public void EliminarDados(string id_devices)
+        {
+            obj.Deletar(Convert.ToInt32(id_devices));
+        }
     }
 }
