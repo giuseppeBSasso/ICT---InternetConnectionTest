@@ -49,6 +49,7 @@ namespace ICT___InternetConnectionTest
         private void frmDashboard_Load(object sender, EventArgs e) { }
 
 
+
         //Metodo que efetua o ping em informações da tabela
         private void pingando()
         {
@@ -69,29 +70,37 @@ namespace ICT___InternetConnectionTest
             foreach (string item in (List<string>)inteiros)
             {
                 Ping ping = new Ping();
-                PingReply replay = ping.Send(item.ToString(), 1000);
-
-                if (replay.Status == IPStatus.Success)
+                try
                 {
-                    dgDados.Rows[aux01].DefaultCellStyle.BackColor = Color.ForestGreen;
-                    dgDados.Rows[aux01].DefaultCellStyle.ForeColor = Color.White;
+                    PingReply replay = ping.Send(item.ToString(), 1000);
 
-                    dgDados.Rows[aux01].Cells["TempodeResposta"].Value = replay.RoundtripTime;
-                    dgDados.Rows[aux01].Cells["ttl"].Value = replay.Options.Ttl;
-                    dgDados.Rows[aux01].Cells["bufferSize"].Value = replay.Buffer.Length;
-                    dgDados.Rows[aux01].Cells["STATUS"].Value = "ONLINE";
-                }
-                else
-                {                  
-                    dgDados.Rows[aux01].DefaultCellStyle.BackColor = Color.Red;
-                    dgDados.Rows[aux01].DefaultCellStyle.ForeColor = Color.White;
 
-                    dgDados.Rows[aux01].Cells["TempodeResposta"].Value = replay.RoundtripTime;
-                    dgDados.Rows[aux01].Cells["ttl"].Value = "0";
-                    dgDados.Rows[aux01].Cells["bufferSize"].Value = replay.Buffer.Length;
-                    dgDados.Rows[aux01].Cells["STATUS"].Value = "OFFILINE";
+                    if (replay.Status == IPStatus.Success)
+                    {
+                        dgDados.Rows[aux01].DefaultCellStyle.BackColor = Color.ForestGreen;
+                        dgDados.Rows[aux01].DefaultCellStyle.ForeColor = Color.White;
+
+                        dgDados.Rows[aux01].Cells["TempodeResposta"].Value = replay.RoundtripTime;
+                        dgDados.Rows[aux01].Cells["ttl"].Value = replay.Options.Ttl;
+                        dgDados.Rows[aux01].Cells["bufferSize"].Value = replay.Buffer.Length;
+                        dgDados.Rows[aux01].Cells["STATUS"].Value = "ONLINE";
+                    }
+                    else
+                    {
+                        dgDados.Rows[aux01].DefaultCellStyle.BackColor = Color.Red;
+                        dgDados.Rows[aux01].DefaultCellStyle.ForeColor = Color.White;
+
+                        dgDados.Rows[aux01].Cells["TempodeResposta"].Value = replay.RoundtripTime;
+                        dgDados.Rows[aux01].Cells["ttl"].Value = "0";
+                        dgDados.Rows[aux01].Cells["bufferSize"].Value = replay.Buffer.Length;
+                        dgDados.Rows[aux01].Cells["STATUS"].Value = "OFFILINE";
+                    }
+                    aux01++;
                 }
-                aux01++;
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERRO de Ping!" + ex);
+                }                   
             }
         }
 
@@ -131,7 +140,7 @@ namespace ICT___InternetConnectionTest
         {
             MostrarDispositivos();
             preenchendoComboBox();
-            CarregandoProgressBar();
+            CarregandoProgressBar();        
         }
 
         //Lista informações no datagrid

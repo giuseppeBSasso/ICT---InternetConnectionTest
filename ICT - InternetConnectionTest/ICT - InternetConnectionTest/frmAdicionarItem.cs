@@ -29,16 +29,23 @@ namespace ICT___InternetConnectionTest
         //Metodo para inserir informações no Banco de Dados
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            try
+            if (textBoxIP.Text == "")
             {
-                objetoDM.InserirDados(textBoxIP.Text, textBoxDescricao.Text, txtCategoria.Text);
-                MessageBox.Show("Dados cadastrados com sucesso!");
-                LimparFrm();
-                //Atualizar dados do datagridview
+                MessageBox.Show("Favor informe os dados!");
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Não foi possivel cadastrar novos items!"+ex);
+                try
+                {
+                    objetoDM.InserirDados(textBoxIP.Text, textBoxDescricao.Text, txtCategoria.Text);
+                    MessageBox.Show("Dados cadastrados com sucesso!");
+                    LimparFrm();
+                    //Atualizar dados do datagridview
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Não foi possivel cadastrar novos items!" + ex);
+                }
             }
         }
 
