@@ -40,42 +40,6 @@ namespace ICT___InternetConnectionTest
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void btnSlide_Click(object sender, EventArgs e)
-        {
-            if (pnlMenuVertical.Width == 234)
-            {
-                pnlMenuVertical.Width = 73;
-            }
-            else
-            {
-                pnlMenuVertical.Width = 234;
-            }
-        }
-
-        private void btnEncerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnRestaurar.Visible = true;
-            btnMaximizar.Visible = false;
-        }
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnMaximizar.Visible = true;
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void pnlBarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -115,6 +79,42 @@ namespace ICT___InternetConnectionTest
         private void linkLabelUserPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             abrirFormInPanel(new frmEditarUsuario());
+        }
+
+        private void btnSlide_Click_1(object sender, EventArgs e)
+        {
+            if (pnlMenuVertical.Width == 234)
+            {
+                pnlMenuVertical.Width = 73;
+            }
+            else
+            {
+                pnlMenuVertical.Width = 234;
+            }
+        }
+
+        private void btnEncerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnRestaurar.Visible = true;
+            btnMaximizar.Visible = false;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

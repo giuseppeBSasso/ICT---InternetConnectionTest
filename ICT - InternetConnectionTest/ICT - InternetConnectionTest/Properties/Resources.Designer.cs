@@ -83,6 +83,16 @@ namespace ICT___InternetConnectionTest.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_Icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Close_Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ICT_Logo {
             get {
                 object obj = ResourceManager.GetObject("ICT_Logo", resourceCulture);
@@ -96,6 +106,36 @@ namespace ICT___InternetConnectionTest.Properties {
         internal static System.Drawing.Bitmap log_out {
             get {
                 object obj = ResourceManager.GetObject("log-out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximizar_Icon {
+            get {
+                object obj = ResourceManager.GetObject("maximizar_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimizar_icon {
+            get {
+                object obj = ResourceManager.GetObject("minimizar_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurar_icon {
+            get {
+                object obj = ResourceManager.GetObject("restaurar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

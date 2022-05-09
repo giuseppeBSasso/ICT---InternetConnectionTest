@@ -174,6 +174,7 @@
             // 
             // btnEncerrar
             // 
+            this.btnEncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerrar.Image")));
             this.btnEncerrar.Location = new System.Drawing.Point(762, 3);
             this.btnEncerrar.Name = "btnEncerrar";
@@ -185,6 +186,7 @@
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
             this.btnMinimizar.Location = new System.Drawing.Point(739, 3);
             this.btnMinimizar.Name = "btnMinimizar";
