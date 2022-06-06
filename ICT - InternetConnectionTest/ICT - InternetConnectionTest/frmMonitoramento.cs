@@ -100,8 +100,9 @@ namespace ICT___InternetConnectionTest
                 catch (Exception ex)
                 {
                     MessageBox.Show("ERRO de Ping!" + ex);
-                }                   
+                }
             }
+            inteiros.Clear();
         }
 
         //Evento de tempo, controlando quando e executado o metodo ping

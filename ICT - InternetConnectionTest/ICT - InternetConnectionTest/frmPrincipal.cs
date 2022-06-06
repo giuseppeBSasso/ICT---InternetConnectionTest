@@ -116,5 +116,11 @@ namespace ICT___InternetConnectionTest
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void dataEHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblData.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }
