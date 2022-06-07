@@ -35,33 +35,33 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.btnEncerrarCessao = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnMonitoramento = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.dataEHora = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnEncerrar = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
-            this.dataEHora = new System.Windows.Forms.Timer(this.components);
+            this.btnEncerrarCessao = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnMonitoramento = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
+            this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
-            this.pnlPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuVertical
@@ -128,87 +128,6 @@
             this.lblPosition.TabIndex = 6;
             this.lblPosition.Text = "Position";
             // 
-            // btnEncerrarCessao
-            // 
-            this.btnEncerrarCessao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEncerrarCessao.FlatAppearance.BorderSize = 0;
-            this.btnEncerrarCessao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnEncerrarCessao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncerrarCessao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncerrarCessao.ForeColor = System.Drawing.Color.White;
-            this.btnEncerrarCessao.Image = global::ICT___InternetConnectionTest.Properties.Resources.log_out;
-            this.btnEncerrarCessao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEncerrarCessao.Location = new System.Drawing.Point(3, 598);
-            this.btnEncerrarCessao.Name = "btnEncerrarCessao";
-            this.btnEncerrarCessao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEncerrarCessao.Size = new System.Drawing.Size(231, 40);
-            this.btnEncerrarCessao.TabIndex = 5;
-            this.btnEncerrarCessao.Text = "SAIR";
-            this.btnEncerrarCessao.UseVisualStyleBackColor = true;
-            this.btnEncerrarCessao.Click += new System.EventHandler(this.btnEncerrarCessao_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 212);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(234, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "NULL";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 166);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(234, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "NULL";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnMonitoramento
-            // 
-            this.btnMonitoramento.FlatAppearance.BorderSize = 0;
-            this.btnMonitoramento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnMonitoramento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMonitoramento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonitoramento.ForeColor = System.Drawing.Color.White;
-            this.btnMonitoramento.Image = ((System.Drawing.Image)(resources.GetObject("btnMonitoramento.Image")));
-            this.btnMonitoramento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMonitoramento.Location = new System.Drawing.Point(0, 120);
-            this.btnMonitoramento.Name = "btnMonitoramento";
-            this.btnMonitoramento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnMonitoramento.Size = new System.Drawing.Size(234, 40);
-            this.btnMonitoramento.TabIndex = 2;
-            this.btnMonitoramento.Text = "       Monitoramento";
-            this.btnMonitoramento.UseVisualStyleBackColor = true;
-            this.btnMonitoramento.Click += new System.EventHandler(this.btnMonitoramento_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnlBarraTitulo
             // 
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -226,6 +145,68 @@
             this.pnlBarraTitulo.Size = new System.Drawing.Size(1066, 50);
             this.pnlBarraTitulo.TabIndex = 1;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.White;
+            this.lblData.Location = new System.Drawing.Point(47, 29);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(43, 16);
+            this.lblData.TabIndex = 12;
+            this.lblData.Text = "DATA";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(47, 8);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(43, 18);
+            this.lblHora.TabIndex = 11;
+            this.lblHora.Text = "Hora";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(443, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(266, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "ICT - InternetConnectionTest";
+            // 
+            // pnlPrincipal
+            // 
+            this.pnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.pnlPrincipal.Controls.Add(this.pictureBox2);
+            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPrincipal.Location = new System.Drawing.Point(234, 50);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(1066, 600);
+            this.pnlPrincipal.TabIndex = 2;
+            // 
+            // dataEHora
+            // 
+            this.dataEHora.Enabled = true;
+            this.dataEHora.Tick += new System.EventHandler(this.dataEHora_Tick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::ICT___InternetConnectionTest.Properties.Resources.ICT_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(447, 188);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // btnMinimizar
             // 
@@ -292,67 +273,87 @@
             this.btnSlide.TabStop = false;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click_1);
             // 
-            // label2
+            // btnEncerrarCessao
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(443, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(266, 23);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "ICT - InternetConnectionTest";
+            this.btnEncerrarCessao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEncerrarCessao.FlatAppearance.BorderSize = 0;
+            this.btnEncerrarCessao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnEncerrarCessao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncerrarCessao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEncerrarCessao.ForeColor = System.Drawing.Color.White;
+            this.btnEncerrarCessao.Image = global::ICT___InternetConnectionTest.Properties.Resources.log_out;
+            this.btnEncerrarCessao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEncerrarCessao.Location = new System.Drawing.Point(3, 598);
+            this.btnEncerrarCessao.Name = "btnEncerrarCessao";
+            this.btnEncerrarCessao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnEncerrarCessao.Size = new System.Drawing.Size(231, 40);
+            this.btnEncerrarCessao.TabIndex = 5;
+            this.btnEncerrarCessao.Text = "SAIR";
+            this.btnEncerrarCessao.UseVisualStyleBackColor = true;
+            this.btnEncerrarCessao.Click += new System.EventHandler(this.btnEncerrarCessao_Click);
             // 
-            // pnlPrincipal
+            // button3
             // 
-            this.pnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.pnlPrincipal.Controls.Add(this.pictureBox2);
-            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(234, 50);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(1066, 600);
-            this.pnlPrincipal.TabIndex = 2;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 212);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(234, 40);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "NULL";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // button2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::ICT___InternetConnectionTest.Properties.Resources.ICT_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(447, 188);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 166);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button2.Size = new System.Drawing.Size(234, 40);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "        Scanear Rede";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblHora
+            // btnMonitoramento
             // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(47, 8);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(43, 18);
-            this.lblHora.TabIndex = 11;
-            this.lblHora.Text = "Hora";
+            this.btnMonitoramento.FlatAppearance.BorderSize = 0;
+            this.btnMonitoramento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnMonitoramento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonitoramento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonitoramento.ForeColor = System.Drawing.Color.White;
+            this.btnMonitoramento.Image = ((System.Drawing.Image)(resources.GetObject("btnMonitoramento.Image")));
+            this.btnMonitoramento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonitoramento.Location = new System.Drawing.Point(0, 120);
+            this.btnMonitoramento.Name = "btnMonitoramento";
+            this.btnMonitoramento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnMonitoramento.Size = new System.Drawing.Size(234, 40);
+            this.btnMonitoramento.TabIndex = 2;
+            this.btnMonitoramento.Text = "       Monitoramento";
+            this.btnMonitoramento.UseVisualStyleBackColor = true;
+            this.btnMonitoramento.Click += new System.EventHandler(this.btnMonitoramento_Click);
             // 
-            // lblData
+            // pictureBox1
             // 
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.Color.White;
-            this.lblData.Location = new System.Drawing.Point(47, 29);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(43, 16);
-            this.lblData.TabIndex = 12;
-            this.lblData.Text = "DATA";
-            // 
-            // dataEHora
-            // 
-            this.dataEHora.Enabled = true;
-            this.dataEHora.Tick += new System.EventHandler(this.dataEHora_Tick);
+            this.pictureBox1.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -369,16 +370,16 @@
             this.Text = "Form1";
             this.pnlMenuVertical.ResumeLayout(false);
             this.pnlMenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
             this.pnlBarraTitulo.PerformLayout();
+            this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
-            this.pnlPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -72,7 +72,7 @@ namespace DataAccess
         {
             using (var connection = GetConnection())
             {
-                connection.Open();
+                connection.Open();          
                 using (var command = new MySqlCommand())
                 {
                     command.Connection = connection;

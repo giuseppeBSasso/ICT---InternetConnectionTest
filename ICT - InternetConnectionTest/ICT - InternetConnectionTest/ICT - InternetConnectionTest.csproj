@@ -98,6 +98,12 @@
     <Compile Include="frmRecuperarContraSenha.Designer.cs">
       <DependentUpon>frmRecuperarContraSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmScanearRede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanearRede.Designer.cs">
+      <DependentUpon>frmScanearRede.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdicionarItem.resx">
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarContraSenha.resx">
       <DependentUpon>frmRecuperarContraSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanearRede.resx">
+      <DependentUpon>frmScanearRede.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

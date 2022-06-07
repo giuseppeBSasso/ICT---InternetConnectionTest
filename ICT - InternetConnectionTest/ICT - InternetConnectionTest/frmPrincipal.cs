@@ -122,5 +122,10 @@ namespace ICT___InternetConnectionTest
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblData.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new frmScanearRede());
+        }
     }
 }
