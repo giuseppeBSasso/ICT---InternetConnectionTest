@@ -141,7 +141,7 @@ namespace ICT___InternetConnectionTest
         {
             MostrarDispositivos();
             preenchendoComboBox();
-           // CarregandoProgressBar();        
+            CarregandoProgressBar();        
         }
 
         //Lista informações no datagrid
@@ -161,8 +161,6 @@ namespace ICT___InternetConnectionTest
                 timer2.Stop();
                 timer3.Start();
                 lblCarregandoInfo.Text = "INFORMAÇÕES CARREGADAS!";
-                progressBarPing.Visible = false;
-                lblCarregandoInfo.Visible = false;
             }
         }
 
@@ -179,7 +177,6 @@ namespace ICT___InternetConnectionTest
         private void CarregandoProgressBar()
         {
             lblCarregandoInfo.Visible = true;
-            progressBarPing.Visible = true;
             this.Opacity = 0.0;
             progressBarPing.Value = 0;
             progressBarPing.Minimum = 0;
@@ -220,11 +217,6 @@ namespace ICT___InternetConnectionTest
             {
                 MessageBox.Show("Selecione um fila para editar!");
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CarregandoProgressBar();
         }
     }
 }

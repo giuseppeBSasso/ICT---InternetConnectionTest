@@ -372,7 +372,7 @@
             this.Controls.Add(this.pnlMenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar";
             this.pnlMenuVertical.ResumeLayout(false);
