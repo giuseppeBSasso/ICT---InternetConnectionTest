@@ -35,33 +35,33 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.pnlBarraTitulo = new System.Windows.Forms.Panel();
-            this.lblData = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.dataEHora = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnEncerrar = new System.Windows.Forms.PictureBox();
-            this.btnSlide = new System.Windows.Forms.PictureBox();
             this.btnEncerrarCessao = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnMonitoramento = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlBarraTitulo = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.btnEncerrar = new System.Windows.Forms.PictureBox();
+            this.btnSlide = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dataEHora = new System.Windows.Forms.Timer(this.components);
             this.pnlMenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
-            this.pnlPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuVertical
@@ -85,6 +85,7 @@
             // linkLabelUserPerfil
             // 
             this.linkLabelUserPerfil.AutoSize = true;
+            this.linkLabelUserPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabelUserPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelUserPerfil.LinkColor = System.Drawing.Color.SteelBlue;
             this.linkLabelUserPerfil.Location = new System.Drawing.Point(3, 84);
@@ -128,6 +129,94 @@
             this.lblPosition.TabIndex = 6;
             this.lblPosition.Text = "Position";
             // 
+            // btnEncerrarCessao
+            // 
+            this.btnEncerrarCessao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEncerrarCessao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEncerrarCessao.FlatAppearance.BorderSize = 0;
+            this.btnEncerrarCessao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnEncerrarCessao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncerrarCessao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEncerrarCessao.ForeColor = System.Drawing.Color.White;
+            this.btnEncerrarCessao.Image = global::ICT___InternetConnectionTest.Properties.Resources.log_out;
+            this.btnEncerrarCessao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEncerrarCessao.Location = new System.Drawing.Point(0, 598);
+            this.btnEncerrarCessao.Name = "btnEncerrarCessao";
+            this.btnEncerrarCessao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnEncerrarCessao.Size = new System.Drawing.Size(234, 40);
+            this.btnEncerrarCessao.TabIndex = 5;
+            this.btnEncerrarCessao.Text = "SAIR";
+            this.btnEncerrarCessao.UseVisualStyleBackColor = true;
+            this.btnEncerrarCessao.Click += new System.EventHandler(this.btnEncerrarCessao_Click);
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::ICT___InternetConnectionTest.Properties.Resources.automacao;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 212);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(234, 40);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Gerenciar Equipamentos";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::ICT___InternetConnectionTest.Properties.Resources.procurar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 166);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button2.Size = new System.Drawing.Size(234, 40);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "        Scanear Rede";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnMonitoramento
+            // 
+            this.btnMonitoramento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMonitoramento.FlatAppearance.BorderSize = 0;
+            this.btnMonitoramento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnMonitoramento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonitoramento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonitoramento.ForeColor = System.Drawing.Color.White;
+            this.btnMonitoramento.Image = ((System.Drawing.Image)(resources.GetObject("btnMonitoramento.Image")));
+            this.btnMonitoramento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonitoramento.Location = new System.Drawing.Point(0, 120);
+            this.btnMonitoramento.Name = "btnMonitoramento";
+            this.btnMonitoramento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnMonitoramento.Size = new System.Drawing.Size(234, 40);
+            this.btnMonitoramento.TabIndex = 2;
+            this.btnMonitoramento.Text = "       Monitoramento";
+            this.btnMonitoramento.UseVisualStyleBackColor = true;
+            this.btnMonitoramento.Click += new System.EventHandler(this.btnMonitoramento_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnlBarraTitulo
             // 
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -167,46 +256,6 @@
             this.lblHora.Size = new System.Drawing.Size(43, 18);
             this.lblHora.TabIndex = 11;
             this.lblHora.Text = "Hora";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(443, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(266, 23);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "ICT - InternetConnectionTest";
-            // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.pnlPrincipal.Controls.Add(this.pictureBox2);
-            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(234, 50);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(1066, 600);
-            this.pnlPrincipal.TabIndex = 2;
-            // 
-            // dataEHora
-            // 
-            this.dataEHora.Enabled = true;
-            this.dataEHora.Tick += new System.EventHandler(this.dataEHora_Tick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::ICT___InternetConnectionTest.Properties.Resources.ICT_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(447, 188);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // btnMinimizar
             // 
@@ -273,87 +322,45 @@
             this.btnSlide.TabStop = false;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click_1);
             // 
-            // btnEncerrarCessao
+            // label2
             // 
-            this.btnEncerrarCessao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEncerrarCessao.FlatAppearance.BorderSize = 0;
-            this.btnEncerrarCessao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnEncerrarCessao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncerrarCessao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncerrarCessao.ForeColor = System.Drawing.Color.White;
-            this.btnEncerrarCessao.Image = global::ICT___InternetConnectionTest.Properties.Resources.log_out;
-            this.btnEncerrarCessao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEncerrarCessao.Location = new System.Drawing.Point(3, 598);
-            this.btnEncerrarCessao.Name = "btnEncerrarCessao";
-            this.btnEncerrarCessao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEncerrarCessao.Size = new System.Drawing.Size(231, 40);
-            this.btnEncerrarCessao.TabIndex = 5;
-            this.btnEncerrarCessao.Text = "SAIR";
-            this.btnEncerrarCessao.UseVisualStyleBackColor = true;
-            this.btnEncerrarCessao.Click += new System.EventHandler(this.btnEncerrarCessao_Click);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(443, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(266, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "ICT - InternetConnectionTest";
             // 
-            // button3
+            // pnlPrincipal
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 212);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(234, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "NULL";
-            this.button3.UseVisualStyleBackColor = true;
+            this.pnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.pnlPrincipal.Controls.Add(this.pictureBox2);
+            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPrincipal.Location = new System.Drawing.Point(234, 50);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(1066, 600);
+            this.pnlPrincipal.TabIndex = 2;
             // 
-            // button2
+            // pictureBox2
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 166);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(234, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "        Scanear Rede";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::ICT___InternetConnectionTest.Properties.Resources.ICT_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(447, 188);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnMonitoramento
+            // dataEHora
             // 
-            this.btnMonitoramento.FlatAppearance.BorderSize = 0;
-            this.btnMonitoramento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnMonitoramento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMonitoramento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonitoramento.ForeColor = System.Drawing.Color.White;
-            this.btnMonitoramento.Image = ((System.Drawing.Image)(resources.GetObject("btnMonitoramento.Image")));
-            this.btnMonitoramento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMonitoramento.Location = new System.Drawing.Point(0, 120);
-            this.btnMonitoramento.Name = "btnMonitoramento";
-            this.btnMonitoramento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnMonitoramento.Size = new System.Drawing.Size(234, 40);
-            this.btnMonitoramento.TabIndex = 2;
-            this.btnMonitoramento.Text = "       Monitoramento";
-            this.btnMonitoramento.UseVisualStyleBackColor = true;
-            this.btnMonitoramento.Click += new System.EventHandler(this.btnMonitoramento_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.dataEHora.Enabled = true;
+            this.dataEHora.Tick += new System.EventHandler(this.dataEHora_Tick);
             // 
             // frmPrincipal
             // 
@@ -367,19 +374,19 @@
             this.Name = "frmPrincipal";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Gerenciar";
             this.pnlMenuVertical.ResumeLayout(false);
             this.pnlMenuVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
             this.pnlBarraTitulo.PerformLayout();
-            this.pnlPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

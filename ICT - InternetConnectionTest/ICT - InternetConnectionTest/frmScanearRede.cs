@@ -26,7 +26,7 @@ namespace ICT___InternetConnectionTest
             InitializeComponent();
         }
 
-            private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(500);
             Ping ping;
@@ -36,9 +36,9 @@ namespace ICT___InternetConnectionTest
             String name;
 
             Parallel.For(0, 254, (i, loopState) =>
-            {
+            {              
                 ping = new Ping();
-                pingReply = ping.Send(textBox1.Text + i.ToString());
+                pingReply = ping.Send(textBox1.Text + i.ToString());          
 
                 this.BeginInvoke((Action)delegate ()
                 {
@@ -54,16 +54,16 @@ namespace ICT___InternetConnectionTest
                             int nRowIndex = dataGridView1.Rows.Count - 1;
                             dataGridView1.Rows[nRowIndex].Cells[0].Value = textBox1.Text + i.ToString();
                             dataGridView1.Rows[nRowIndex].Cells[1].Value = name;
-                            dataGridView1.Rows[nRowIndex].Cells[2].Value = "Active";
+                            dataGridView1.Rows[nRowIndex].Cells[2].Value = "ATIVO";
                         }
                         catch (SocketException ex)
                         {
                             name = "?";
                         }
-                    }
+                    }                   
                 });
-            });
-            MessageBox.Show("Scan completed!");
+            });          
+            MessageBox.Show("Scan Completo!");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +87,11 @@ namespace ICT___InternetConnectionTest
                 textBox1.Text = "Exp : 192.168.0.";
                 textBox1.ForeColor = Color.DimGray;
             }
+        }
+
+        private void btnEncerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

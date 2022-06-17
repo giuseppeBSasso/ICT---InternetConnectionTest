@@ -127,5 +127,12 @@ namespace ICT___InternetConnectionTest
         {
             abrirFormInPanel(new frmScanearRede());
         }
+
+        private saidaConsole.frmColetarInformacoes obj = new saidaConsole.frmColetarInformacoes();           
+      
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(obj);
+        }
     }
 }

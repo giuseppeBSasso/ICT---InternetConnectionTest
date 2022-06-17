@@ -157,6 +157,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\OUTROS\1 - Documentos diversos\projetos em c#\informações de adptadores de rede\saidaConsole\saidaConsole.vbproj">
+      <Project>{546484ae-6433-4759-accd-ea7daab0fe37}</Project>
+      <Name>saidaConsole</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{b6deefa6-e248-4767-9387-91436ef12c58}</Project>
       <Name>Common</Name>
@@ -195,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\maximizar_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automacao.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
