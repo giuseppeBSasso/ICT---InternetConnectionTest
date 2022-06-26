@@ -43,11 +43,11 @@ namespace Domain
             {
                 userDados.editProfile(IdUser, FirstName, Password, LastName, Email);
                 LoginUser(FirstName, Password);
-                return "Seu perfil foi atualizado com sucesso";
+                return "Seu perfil foi atualizado com sucesso!";
             }
             catch (Exception ex)
             {
-                return "UserName is already registered, try another" ;
+                return "Usuário já está registrado, tente outro!";
             }
         }
 
@@ -61,7 +61,7 @@ namespace Domain
             return userDados.recoverPassword(userRequesting);
         }
 
-        //Permissão de acesso
+        //Permissão de acesso OBS: pontos de melhoria
         public void AnyMethod()
         {
             if (UserLoginCache.Position == Positions.Administrador)
