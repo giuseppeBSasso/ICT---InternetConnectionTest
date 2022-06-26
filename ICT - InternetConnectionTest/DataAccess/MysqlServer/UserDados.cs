@@ -90,25 +90,25 @@ namespace DataAccess
 
                         var mailService = new MailServices.SystemSupportMail();
                         mailService.sendMail(
-                            subject:"SYSTEM: password recovery request",
-                            body:"Hi, "+userName+"\nYou Requested to recover your password.\n"+
-                            "your current password is: "+accountPassword+
-                            "\nHowever, we ask that change your password inmediately once your enter the system.",
+                            subject: "SYSTEM: solicitação de recuperação de senha!",
+                            body:"Oi, "+userName+ "\nVocê pediu para recuperar sua senha!\n" +
+                            "Sua senha atual é: "+accountPassword+
+                            "\nNo entanto, solicitamos que altere sua senha \nimediatamente assim que entrar no sistema!",
                             recipientMail: new List<string> { userMail }
                             );
-                        return "Hi, " + userName + "\nYou Requested to recover your password.\n" +
-                            "please check your mail: " + userMail +
-                            "\nHowever, we ask that your change password inmediately once your enter the system.";
+                        return "Oi, " + userName + "\nVocê pediu para recuperar sua senha!\n" +
+                            "Por favor cheque seu e-mail: " + userMail +
+                            "\nNo entanto, solicitamos que altere sua senha \nimediatamente assim que entrar no sistema!";
                     }
                     else
                     {
-                        return "Sorry, you do not have an account with that mail or username";
+                        return "Desculpe, você não tem uma conta com esse e-mail ou nome de usuário!";
                     }
                 }
             }
         }
 
-        //Permissão de acesso
+        //Permissão de acesso OBS: Pontos de melhoria
         public void AnyMethod()
         {
             if (UserLoginCache.Position == Positions.Administrador)
