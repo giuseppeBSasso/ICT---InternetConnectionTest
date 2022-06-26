@@ -21,8 +21,8 @@ namespace ICT___InternetConnectionTest
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity < 1) this.Opacity += 0.05;
-            progressBar1.Value += 1;
-            if (progressBar1.Value == 100)
+            progressBarBemVindo.Value += 1;
+            if (progressBarBemVindo.Value == 100)
             {
                 timer1.Stop();
                 timer2.Start();
@@ -43,9 +43,9 @@ namespace ICT___InternetConnectionTest
         {
             lblUserName.Text = UserLoginCache.FirstName + ", " + UserLoginCache.LastName;
             this.Opacity = 0.0;
-            progressBar1.Value = 0;
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = 100;
+            progressBarBemVindo.Value = 0;
+            progressBarBemVindo.Minimum = 0;
+            progressBarBemVindo.Maximum = 100;
 
             timer1.Start();
         }

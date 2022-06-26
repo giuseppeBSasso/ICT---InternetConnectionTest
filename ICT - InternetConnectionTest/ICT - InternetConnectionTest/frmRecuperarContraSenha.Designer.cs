@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUserRequest = new System.Windows.Forms.TextBox();
+            this.txtRecuperarSenha = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnEncerrar = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTituloRecuperarSenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,13 +48,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Digite Seu Nome de Usuário ou E-mail :";
             // 
-            // txtUserRequest
+            // txtRecuperarSenha
             // 
-            this.txtUserRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserRequest.Location = new System.Drawing.Point(30, 77);
-            this.txtUserRequest.Name = "txtUserRequest";
-            this.txtUserRequest.Size = new System.Drawing.Size(301, 23);
-            this.txtUserRequest.TabIndex = 1;
+            this.txtRecuperarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecuperarSenha.Location = new System.Drawing.Point(30, 77);
+            this.txtRecuperarSenha.Name = "txtRecuperarSenha";
+            this.txtRecuperarSenha.Size = new System.Drawing.Size(301, 23);
+            this.txtRecuperarSenha.TabIndex = 1;
             // 
             // btnSalvar
             // 
@@ -91,16 +91,16 @@
             this.btnEncerrar.TabStop = false;
             this.btnEncerrar.Click += new System.EventHandler(this.btnEncerrar_Click);
             // 
-            // label2
+            // lblTituloRecuperarSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(238, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 19);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "RECUPERAR SENHA";
+            this.lblTituloRecuperarSenha.AutoSize = true;
+            this.lblTituloRecuperarSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTituloRecuperarSenha.ForeColor = System.Drawing.Color.White;
+            this.lblTituloRecuperarSenha.Location = new System.Drawing.Point(238, 2);
+            this.lblTituloRecuperarSenha.Name = "lblTituloRecuperarSenha";
+            this.lblTituloRecuperarSenha.Size = new System.Drawing.Size(150, 19);
+            this.lblTituloRecuperarSenha.TabIndex = 9;
+            this.lblTituloRecuperarSenha.Text = "RECUPERAR SENHA";
             // 
             // frmRecuperarContraSenha
             // 
@@ -108,11 +108,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(613, 229);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTituloRecuperarSenha);
             this.Controls.Add(this.btnEncerrar);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtUserRequest);
+            this.Controls.Add(this.txtRecuperarSenha);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecuperarContraSenha";
@@ -128,10 +128,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUserRequest;
+        private System.Windows.Forms.TextBox txtRecuperarSenha;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.PictureBox btnEncerrar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTituloRecuperarSenha;
     }
 }

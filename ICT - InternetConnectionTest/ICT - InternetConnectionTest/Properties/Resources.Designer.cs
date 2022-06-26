@@ -73,6 +73,16 @@ namespace ICT___InternetConnectionTest.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap atualizar {
+            get {
+                object obj = ResourceManager.GetObject("atualizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap automacao {
             get {
                 object obj = ResourceManager.GetObject("automacao", resourceCulture);
@@ -103,9 +113,29 @@ namespace ICT___InternetConnectionTest.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap desligar {
+            get {
+                object obj = ResourceManager.GetObject("desligar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ICT_Logo {
             get {
                 object obj = ResourceManager.GetObject("ICT_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap informacoes {
+            get {
+                object obj = ResourceManager.GetObject("informacoes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

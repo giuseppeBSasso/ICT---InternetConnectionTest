@@ -195,15 +195,15 @@ namespace ICT___InternetConnectionTest
             if (dgDados.SelectedRows.Count > 0)
             {
                 frm.txtid.Text = dgDados.CurrentRow.Cells["id_devices"].Value.ToString();
-                frm.textBoxIP.Text = dgDados.CurrentRow.Cells["ip_address"].Value.ToString();
-                frm.textBoxDescricao.Text = dgDados.CurrentRow.Cells["description"].Value.ToString();
+                frm.txtIP.Text = dgDados.CurrentRow.Cells["ip_address"].Value.ToString();
+                frm.txtDescricao.Text = dgDados.CurrentRow.Cells["description"].Value.ToString();
                 frm.txtCategoria.Text = dgDados.CurrentRow.Cells["category_id"].Value.ToString();
 
                 frm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Selecione um fila para editar!");
+                MessageBox.Show("Selecione uma fila para editar!");
             }
         }
 
@@ -218,7 +218,7 @@ namespace ICT___InternetConnectionTest
             }
             else
             {
-                MessageBox.Show("Selecione um fila para editar!");
+                MessageBox.Show("Selecione uma fila para editar!");
             }
         }
 

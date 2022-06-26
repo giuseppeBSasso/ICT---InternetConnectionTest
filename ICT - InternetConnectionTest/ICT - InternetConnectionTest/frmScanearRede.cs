@@ -38,7 +38,7 @@ namespace ICT___InternetConnectionTest
             Parallel.For(0, 254, (i, loopState) =>
             {              
                 ping = new Ping();
-                pingReply = ping.Send(textBox1.Text + i.ToString());          
+                pingReply = ping.Send(txtSubNet.Text + i.ToString());          
 
                 this.BeginInvoke((Action)delegate ()
                 {
@@ -46,15 +46,15 @@ namespace ICT___InternetConnectionTest
                     {
                         try
                         {
-                            addr = IPAddress.Parse(textBox1.Text + i.ToString());
+                            addr = IPAddress.Parse(txtSubNet.Text + i.ToString());
                             host = Dns.GetHostEntry(addr);
                             name = host.HostName;
 
-                            dataGridView1.Rows.Add();
-                            int nRowIndex = dataGridView1.Rows.Count - 1;
-                            dataGridView1.Rows[nRowIndex].Cells[0].Value = textBox1.Text + i.ToString();
-                            dataGridView1.Rows[nRowIndex].Cells[1].Value = name;
-                            dataGridView1.Rows[nRowIndex].Cells[2].Value = "ATIVO";
+                            dgInfoEquipamentos.Rows.Add();
+                            int nRowIndex = dgInfoEquipamentos.Rows.Count - 1;
+                            dgInfoEquipamentos.Rows[nRowIndex].Cells[0].Value = txtSubNet.Text + i.ToString();
+                            dgInfoEquipamentos.Rows[nRowIndex].Cells[1].Value = name;
+                            dgInfoEquipamentos.Rows[nRowIndex].Cells[2].Value = "ATIVO";
                         }
                         catch (SocketException ex)
                         {
@@ -73,19 +73,19 @@ namespace ICT___InternetConnectionTest
 
         private void textBox1_Enter_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Exp : 192.168.0.")
+            if (txtSubNet.Text == "Exp : 192.168.0.")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.DimGray;
+                txtSubNet.Text = "";
+                txtSubNet.ForeColor = Color.DimGray;
             }
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (txtSubNet.Text == "")
             {
-                textBox1.Text = "Exp : 192.168.0.";
-                textBox1.ForeColor = Color.DimGray;
+                txtSubNet.Text = "Exp : 192.168.0.";
+                txtSubNet.ForeColor = Color.DimGray;
             }
         }
 

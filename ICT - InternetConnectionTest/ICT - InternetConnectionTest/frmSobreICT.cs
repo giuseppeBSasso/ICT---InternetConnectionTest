@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Domain;
 using System.Runtime.InteropServices;
 
 namespace ICT___InternetConnectionTest
 {
-    public partial class frmRecuperarContraSenha : Form
+    public partial class frmSobreICT : Form
     {
-        public frmRecuperarContraSenha()
+        public frmSobreICT()
         {
             InitializeComponent();
         }
@@ -24,19 +23,12 @@ namespace ICT___InternetConnectionTest
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            var user = new UserModel();
-            var Result = user.recoverPassword(txtRecuperarSenha.Text);
-            lblResultado.Text = Result;
-        }
-
         private void btnEncerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmRecuperarContraSenha_MouseDown(object sender, MouseEventArgs e)
+        private void frmSobreICT_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

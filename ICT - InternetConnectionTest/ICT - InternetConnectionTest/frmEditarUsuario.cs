@@ -28,28 +28,28 @@ namespace ICT___InternetConnectionTest
         private void loadUserData()
         {
             //View
-            lblUser.Text = UserLoginCache.FirstName;
-            lblLastName.Text = UserLoginCache.LastName;
-            lblMail.Text = UserLoginCache.Email;
-            lblPosition.Text = UserLoginCache.Position;
+            lblName.Text = UserLoginCache.FirstName;
+            lblSobrenome.Text = UserLoginCache.LastName;
+            lblEmail.Text = UserLoginCache.Email;
+            lblPermissao.Text = UserLoginCache.Position;
 
             //Edit Panel
-            txtFirstName.Text = UserLoginCache.FirstName;
-            txtLastName.Text = UserLoginCache.LastName;
+            txtPrimeiroNome.Text = UserLoginCache.FirstName;
+            txtSobrenome.Text = UserLoginCache.LastName;
             txtEmail.Text = UserLoginCache.Email;
-            txtPassword.Text = UserLoginCache.Password;
-            txtConfirmPass.Text = UserLoginCache.Password;
-            txtCurrentPassword.UseSystemPasswordChar = true;
-            txtCurrentPassword.Text = "";
+            txtSenha.Text = UserLoginCache.Password;
+            txtComfirmarSenha.Text = UserLoginCache.Password;
+            txtSenhaAtual.UseSystemPasswordChar = true;
+            txtSenhaAtual.Text = "";
         }
 
         private void initializePassEditControls()
         {
-            LinkEditPass.Text = "Edit";
-            txtPassword.UseSystemPasswordChar = true;
-            txtPassword.Enabled = false;
-            txtConfirmPass.UseSystemPasswordChar = true;
-            txtConfirmPass.Enabled = false;
+            LinkEditPass.Text = "Editar";
+            txtSenha.UseSystemPasswordChar = true;
+            txtSenha.Enabled = false;
+            txtComfirmarSenha.UseSystemPasswordChar = true;
+            txtComfirmarSenha.Enabled = false;
         }
 
         private void reset()
@@ -66,35 +66,35 @@ namespace ICT___InternetConnectionTest
 
         private void LinkEditPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (LinkEditPass.Text == "Edit")
+            if (LinkEditPass.Text == "Editar")
             {
-                LinkEditPass.Text = "Cancel";
-                txtPassword.Enabled = true;
-                txtPassword.Text = "";
-                txtConfirmPass.Enabled = true;
-                txtConfirmPass.Text = "";
+                LinkEditPass.Text = "Cancelar";
+                txtSenha.Enabled = true;
+                txtSenha.Text = "";
+                txtComfirmarSenha.Enabled = true;
+                txtComfirmarSenha.Text = "";
             }
-            else if (LinkEditPass.Text == "Cancel")
+            else if (LinkEditPass.Text == "Cancelar")
             {
                 initializePassEditControls();
-                txtPassword.Text = UserLoginCache.Password;
-                txtConfirmPass.Text = UserLoginCache.Password;
+                txtSenha.Text = UserLoginCache.Password;
+                txtComfirmarSenha.Text = UserLoginCache.Password;
             }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text.Length >= 5)
+            if (txtSenha.Text.Length >= 5)
             {
-                if (txtPassword.Text == txtConfirmPass.Text)
+                if (txtSenha.Text == txtComfirmarSenha.Text)
                 {
-                    if (txtCurrentPassword.Text == UserLoginCache.Password)
+                    if (txtSenhaAtual.Text == UserLoginCache.Password)
                     {
                         var userModel = new UserModel(
                             idUser: UserLoginCache.IdUser,
-                            password: txtPassword.Text,
-                            firstName: txtFirstName.Text,
-                            lastName: txtLastName.Text,
+                            password: txtSenha.Text,
+                            firstName: txtPrimeiroNome.Text,
+                            lastName: txtSobrenome.Text,
                             position: null,
                             email: txtEmail.Text);
                         var result = userModel.editUserProfile();
@@ -103,13 +103,13 @@ namespace ICT___InternetConnectionTest
                         panel1.Visible = false;
                     }
                     else
-                        MessageBox.Show("Icorrect current password, try again");
+                        MessageBox.Show("Senha atual incorreta, tente novamente!");
                 }
                 else
-                    MessageBox.Show("The password do not match, try again");
+                    MessageBox.Show("As senhas não corresponde, tente novamente!");
             }
             else
-                MessageBox.Show("The password must have a minimum of 5 characters");
+                MessageBox.Show("A senha deve ter no mínimo 5 caracteres!");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

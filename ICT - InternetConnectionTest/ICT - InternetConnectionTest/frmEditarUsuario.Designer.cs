@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImgUser = new System.Windows.Forms.PictureBox();
             this.btnEditarPerfil = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblMail = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblTituloNome = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblTituloSobrenome = new System.Windows.Forms.Label();
+            this.lblSobrenome = new System.Windows.Forms.Label();
+            this.lblTituloEmail = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblTituloPermissao = new System.Windows.Forms.Label();
+            this.lblPermissao = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalvarInfo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.LinkEditPass = new System.Windows.Forms.LinkLabel();
-            this.txtCurrentPassword = new System.Windows.Forms.TextBox();
+            this.txtSenhaAtual = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtConfirmPass = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtComfirmarSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.txtPrimeiroNome = new System.Windows.Forms.TextBox();
+            this.lblTituloEditarInfo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImgUser)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxImgUser
             // 
-            this.pictureBox1.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImgUser.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
+            this.pictureBoxImgUser.Location = new System.Drawing.Point(34, 55);
+            this.pictureBoxImgUser.Name = "pictureBoxImgUser";
+            this.pictureBoxImgUser.Size = new System.Drawing.Size(150, 150);
+            this.pictureBoxImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImgUser.TabIndex = 0;
+            this.pictureBoxImgUser.TabStop = false;
             // 
             // btnEditarPerfil
             // 
@@ -83,133 +83,133 @@
             this.btnEditarPerfil.Text = "Editar Perfil";
             this.btnEditarPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnEditarPerfil_LinkClicked);
             // 
-            // label1
+            // lblTituloNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(203, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome :";
+            this.lblTituloNome.AutoSize = true;
+            this.lblTituloNome.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNome.ForeColor = System.Drawing.Color.White;
+            this.lblTituloNome.Location = new System.Drawing.Point(203, 32);
+            this.lblTituloNome.Name = "lblTituloNome";
+            this.lblTituloNome.Size = new System.Drawing.Size(58, 16);
+            this.lblTituloNome.TabIndex = 2;
+            this.lblTituloNome.Text = "Nome :";
             // 
-            // lblUser
+            // lblName
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(203, 57);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(39, 15);
-            this.lblUser.TabIndex = 3;
-            this.lblUser.Text = "nome";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(203, 57);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(39, 15);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "nome";
             // 
-            // label3
+            // lblTituloSobrenome
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(203, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Sobrenome :";
+            this.lblTituloSobrenome.AutoSize = true;
+            this.lblTituloSobrenome.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSobrenome.ForeColor = System.Drawing.Color.White;
+            this.lblTituloSobrenome.Location = new System.Drawing.Point(203, 86);
+            this.lblTituloSobrenome.Name = "lblTituloSobrenome";
+            this.lblTituloSobrenome.Size = new System.Drawing.Size(103, 16);
+            this.lblTituloSobrenome.TabIndex = 4;
+            this.lblTituloSobrenome.Text = "Sobrenome :";
             // 
-            // lblLastName
+            // lblSobrenome
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.ForeColor = System.Drawing.Color.White;
-            this.lblLastName.Location = new System.Drawing.Point(203, 111);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(70, 15);
-            this.lblLastName.TabIndex = 5;
-            this.lblLastName.Text = "sobrenome";
+            this.lblSobrenome.AutoSize = true;
+            this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobrenome.ForeColor = System.Drawing.Color.White;
+            this.lblSobrenome.Location = new System.Drawing.Point(203, 111);
+            this.lblSobrenome.Name = "lblSobrenome";
+            this.lblSobrenome.Size = new System.Drawing.Size(70, 15);
+            this.lblSobrenome.TabIndex = 5;
+            this.lblSobrenome.Text = "sobrenome";
             // 
-            // label5
+            // lblTituloEmail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(203, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "E-mail :";
+            this.lblTituloEmail.AutoSize = true;
+            this.lblTituloEmail.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloEmail.ForeColor = System.Drawing.Color.White;
+            this.lblTituloEmail.Location = new System.Drawing.Point(203, 137);
+            this.lblTituloEmail.Name = "lblTituloEmail";
+            this.lblTituloEmail.Size = new System.Drawing.Size(63, 16);
+            this.lblTituloEmail.TabIndex = 6;
+            this.lblTituloEmail.Text = "E-mail :";
             // 
-            // lblMail
+            // lblEmail
             // 
-            this.lblMail.AutoSize = true;
-            this.lblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMail.ForeColor = System.Drawing.Color.White;
-            this.lblMail.Location = new System.Drawing.Point(203, 162);
-            this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(38, 15);
-            this.lblMail.TabIndex = 7;
-            this.lblMail.Text = "email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(203, 162);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(38, 15);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "email";
             // 
-            // label7
+            // lblTituloPermissao
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(203, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 16);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Premissão :";
+            this.lblTituloPermissao.AutoSize = true;
+            this.lblTituloPermissao.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPermissao.ForeColor = System.Drawing.Color.White;
+            this.lblTituloPermissao.Location = new System.Drawing.Point(203, 188);
+            this.lblTituloPermissao.Name = "lblTituloPermissao";
+            this.lblTituloPermissao.Size = new System.Drawing.Size(94, 16);
+            this.lblTituloPermissao.TabIndex = 8;
+            this.lblTituloPermissao.Text = "Premissão :";
             // 
-            // lblPosition
+            // lblPermissao
             // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.White;
-            this.lblPosition.Location = new System.Drawing.Point(203, 213);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(65, 15);
-            this.lblPosition.TabIndex = 9;
-            this.lblPosition.Text = "permissão";
+            this.lblPermissao.AutoSize = true;
+            this.lblPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermissao.ForeColor = System.Drawing.Color.White;
+            this.lblPermissao.Location = new System.Drawing.Point(203, 213);
+            this.lblPermissao.Name = "lblPermissao";
+            this.lblPermissao.Size = new System.Drawing.Size(65, 15);
+            this.lblPermissao.TabIndex = 9;
+            this.lblPermissao.Text = "permissão";
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnSalvarInfo);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.LinkEditPass);
-            this.panel1.Controls.Add(this.txtCurrentPassword);
+            this.panel1.Controls.Add(this.txtSenhaAtual);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtConfirmPass);
-            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtComfirmarSenha);
+            this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtLastName);
-            this.panel1.Controls.Add(this.txtFirstName);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtSobrenome);
+            this.panel1.Controls.Add(this.txtPrimeiroNome);
+            this.panel1.Controls.Add(this.lblTituloEditarInfo);
             this.panel1.Location = new System.Drawing.Point(533, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(296, 502);
             this.panel1.TabIndex = 10;
             this.panel1.Visible = false;
             // 
-            // button2
+            // btnSalvarInfo
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(153, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 44);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvarInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarInfo.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarInfo.Location = new System.Drawing.Point(153, 395);
+            this.btnSalvarInfo.Name = "btnSalvarInfo";
+            this.btnSalvarInfo.Size = new System.Drawing.Size(131, 44);
+            this.btnSalvarInfo.TabIndex = 14;
+            this.btnSalvarInfo.Text = "Salvar";
+            this.btnSalvarInfo.UseVisualStyleBackColor = true;
+            this.btnSalvarInfo.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -238,12 +238,12 @@
             this.LinkEditPass.Text = "Edit";
             this.LinkEditPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkEditPass_LinkClicked);
             // 
-            // txtCurrentPassword
+            // txtSenhaAtual
             // 
-            this.txtCurrentPassword.Location = new System.Drawing.Point(19, 355);
-            this.txtCurrentPassword.Name = "txtCurrentPassword";
-            this.txtCurrentPassword.Size = new System.Drawing.Size(265, 20);
-            this.txtCurrentPassword.TabIndex = 12;
+            this.txtSenhaAtual.Location = new System.Drawing.Point(19, 355);
+            this.txtSenhaAtual.Name = "txtSenhaAtual";
+            this.txtSenhaAtual.Size = new System.Drawing.Size(265, 20);
+            this.txtSenhaAtual.TabIndex = 12;
             // 
             // label15
             // 
@@ -311,19 +311,19 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "Nome :";
             // 
-            // txtConfirmPass
+            // txtComfirmarSenha
             // 
-            this.txtConfirmPass.Location = new System.Drawing.Point(19, 299);
-            this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.Size = new System.Drawing.Size(265, 20);
-            this.txtConfirmPass.TabIndex = 5;
+            this.txtComfirmarSenha.Location = new System.Drawing.Point(19, 299);
+            this.txtComfirmarSenha.Name = "txtComfirmarSenha";
+            this.txtComfirmarSenha.Size = new System.Drawing.Size(265, 20);
+            this.txtComfirmarSenha.TabIndex = 5;
             // 
-            // txtPassword
+            // txtSenha
             // 
-            this.txtPassword.Location = new System.Drawing.Point(19, 236);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(265, 20);
-            this.txtPassword.TabIndex = 4;
+            this.txtSenha.Location = new System.Drawing.Point(19, 236);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(265, 20);
+            this.txtSenha.TabIndex = 4;
             // 
             // txtEmail
             // 
@@ -332,30 +332,30 @@
             this.txtEmail.Size = new System.Drawing.Size(265, 20);
             this.txtEmail.TabIndex = 3;
             // 
-            // txtLastName
+            // txtSobrenome
             // 
-            this.txtLastName.Location = new System.Drawing.Point(19, 115);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(265, 20);
-            this.txtLastName.TabIndex = 2;
+            this.txtSobrenome.Location = new System.Drawing.Point(19, 115);
+            this.txtSobrenome.Name = "txtSobrenome";
+            this.txtSobrenome.Size = new System.Drawing.Size(265, 20);
+            this.txtSobrenome.TabIndex = 2;
             // 
-            // txtFirstName
+            // txtPrimeiroNome
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(19, 60);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(265, 20);
-            this.txtFirstName.TabIndex = 1;
+            this.txtPrimeiroNome.Location = new System.Drawing.Point(19, 60);
+            this.txtPrimeiroNome.Name = "txtPrimeiroNome";
+            this.txtPrimeiroNome.Size = new System.Drawing.Size(265, 20);
+            this.txtPrimeiroNome.TabIndex = 1;
             // 
-            // label9
+            // lblTituloEditarInfo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(15, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(246, 19);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "EDITAR MINHAS INFORMAÇÕES ";
+            this.lblTituloEditarInfo.AutoSize = true;
+            this.lblTituloEditarInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloEditarInfo.ForeColor = System.Drawing.Color.White;
+            this.lblTituloEditarInfo.Location = new System.Drawing.Point(15, 10);
+            this.lblTituloEditarInfo.Name = "lblTituloEditarInfo";
+            this.lblTituloEditarInfo.Size = new System.Drawing.Size(246, 19);
+            this.lblTituloEditarInfo.TabIndex = 0;
+            this.lblTituloEditarInfo.Text = "EDITAR MINHAS INFORMAÇÕES ";
             // 
             // frmEditarUsuario
             // 
@@ -364,21 +364,21 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(829, 499);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblPosition);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblMail);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPermissao);
+            this.Controls.Add(this.lblTituloPermissao);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblTituloEmail);
+            this.Controls.Add(this.lblSobrenome);
+            this.Controls.Add(this.lblTituloSobrenome);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblTituloNome);
             this.Controls.Add(this.btnEditarPerfil);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxImgUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditarUsuario";
             this.Text = "frmEditarUsuario";
             this.Load += new System.EventHandler(this.frmEditarUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImgUser)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -388,31 +388,31 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxImgUser;
         private System.Windows.Forms.LinkLabel btnEditarPerfil;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblMail;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblTituloNome;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblTituloSobrenome;
+        private System.Windows.Forms.Label lblSobrenome;
+        private System.Windows.Forms.Label lblTituloEmail;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblTituloPermissao;
+        private System.Windows.Forms.Label lblPermissao;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtCurrentPassword;
+        private System.Windows.Forms.TextBox txtSenhaAtual;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtConfirmPass;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtComfirmarSenha;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.TextBox txtPrimeiroNome;
+        private System.Windows.Forms.Label lblTituloEditarInfo;
+        private System.Windows.Forms.Button btnSalvarInfo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.LinkLabel LinkEditPass;
     }

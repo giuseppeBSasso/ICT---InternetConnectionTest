@@ -31,7 +31,7 @@ namespace ICT___InternetConnectionTest
         {
             try
             {
-                objetoDM.EditarDados(textBoxIP.Text, textBoxDescricao.Text, txtCategoria.Text, txtid.Text);
+                objetoDM.EditarDados(txtIP.Text, txtDescricao.Text, txtCategoria.Text, txtid.Text);
                 MessageBox.Show("Dados editados com sucesso!");
                 LimparFrm();
                 this.Close();
@@ -56,8 +56,8 @@ namespace ICT___InternetConnectionTest
 
         private void LimparFrm()
         {
-            textBoxDescricao.Clear();
-            textBoxIP.Clear();
+            txtDescricao.Clear();
+            txtIP.Clear();
             txtCategoria.Clear();
             txtid.Clear();
         }

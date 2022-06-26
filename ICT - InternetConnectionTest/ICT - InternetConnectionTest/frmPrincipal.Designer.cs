@@ -31,16 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlMenuVertical = new System.Windows.Forms.Panel();
+            this.btnGerenciarEquipamentos = new System.Windows.Forms.Button();
             this.linkLabelUserPerfil = new System.Windows.Forms.LinkLabel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblPermissao = new System.Windows.Forms.Label();
             this.btnEncerrarCessao = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInfoEquipamentos = new System.Windows.Forms.Button();
+            this.btnScanearRede = new System.Windows.Forms.Button();
             this.btnMonitoramento = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImgUser = new System.Windows.Forms.PictureBox();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -50,37 +52,59 @@
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.dataEHora = new System.Windows.Forms.Timer(this.components);
             this.pnlMenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImgUser)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             this.pnlPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuVertical
             // 
             this.pnlMenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.pnlMenuVertical.Controls.Add(this.btnGerenciarEquipamentos);
             this.pnlMenuVertical.Controls.Add(this.linkLabelUserPerfil);
             this.pnlMenuVertical.Controls.Add(this.lblEmail);
             this.pnlMenuVertical.Controls.Add(this.lblName);
-            this.pnlMenuVertical.Controls.Add(this.lblPosition);
+            this.pnlMenuVertical.Controls.Add(this.lblPermissao);
             this.pnlMenuVertical.Controls.Add(this.btnEncerrarCessao);
-            this.pnlMenuVertical.Controls.Add(this.button3);
-            this.pnlMenuVertical.Controls.Add(this.button2);
+            this.pnlMenuVertical.Controls.Add(this.btnInfoEquipamentos);
+            this.pnlMenuVertical.Controls.Add(this.btnScanearRede);
             this.pnlMenuVertical.Controls.Add(this.btnMonitoramento);
-            this.pnlMenuVertical.Controls.Add(this.pictureBox1);
+            this.pnlMenuVertical.Controls.Add(this.pictureBoxImgUser);
             this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuVertical.Name = "pnlMenuVertical";
             this.pnlMenuVertical.Size = new System.Drawing.Size(234, 650);
             this.pnlMenuVertical.TabIndex = 0;
+            // 
+            // btnGerenciarEquipamentos
+            // 
+            this.btnGerenciarEquipamentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGerenciarEquipamentos.FlatAppearance.BorderSize = 0;
+            this.btnGerenciarEquipamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnGerenciarEquipamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciarEquipamentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciarEquipamentos.ForeColor = System.Drawing.Color.White;
+            this.btnGerenciarEquipamentos.Image = global::ICT___InternetConnectionTest.Properties.Resources.automacao;
+            this.btnGerenciarEquipamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerenciarEquipamentos.Location = new System.Drawing.Point(0, 258);
+            this.btnGerenciarEquipamentos.Name = "btnGerenciarEquipamentos";
+            this.btnGerenciarEquipamentos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnGerenciarEquipamentos.Size = new System.Drawing.Size(234, 40);
+            this.btnGerenciarEquipamentos.TabIndex = 10;
+            this.btnGerenciarEquipamentos.Text = "Gerenciar Equipamentos";
+            this.btnGerenciarEquipamentos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGerenciarEquipamentos.UseVisualStyleBackColor = true;
+            this.btnGerenciarEquipamentos.Click += new System.EventHandler(this.btnGerenciarEquipamentos_Click);
             // 
             // linkLabelUserPerfil
             // 
@@ -118,16 +142,16 @@
             this.lblName.TabIndex = 7;
             this.lblName.Text = "Name";
             // 
-            // lblPosition
+            // lblPermissao
             // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblPosition.Location = new System.Drawing.Point(77, 13);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(64, 13);
-            this.lblPosition.TabIndex = 6;
-            this.lblPosition.Text = "Position";
+            this.lblPermissao.AutoSize = true;
+            this.lblPermissao.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermissao.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblPermissao.Location = new System.Drawing.Point(77, 13);
+            this.lblPermissao.Name = "lblPermissao";
+            this.lblPermissao.Size = new System.Drawing.Size(74, 13);
+            this.lblPermissao.TabIndex = 6;
+            this.lblPermissao.Text = "PERMISSÃO";
             // 
             // btnEncerrarCessao
             // 
@@ -149,44 +173,44 @@
             this.btnEncerrarCessao.UseVisualStyleBackColor = true;
             this.btnEncerrarCessao.Click += new System.EventHandler(this.btnEncerrarCessao_Click);
             // 
-            // button3
+            // btnInfoEquipamentos
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::ICT___InternetConnectionTest.Properties.Resources.automacao;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 212);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(234, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Gerenciar Equipamentos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnInfoEquipamentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfoEquipamentos.FlatAppearance.BorderSize = 0;
+            this.btnInfoEquipamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnInfoEquipamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfoEquipamentos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfoEquipamentos.ForeColor = System.Drawing.Color.White;
+            this.btnInfoEquipamentos.Image = global::ICT___InternetConnectionTest.Properties.Resources.informacoes;
+            this.btnInfoEquipamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfoEquipamentos.Location = new System.Drawing.Point(0, 212);
+            this.btnInfoEquipamentos.Name = "btnInfoEquipamentos";
+            this.btnInfoEquipamentos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnInfoEquipamentos.Size = new System.Drawing.Size(234, 40);
+            this.btnInfoEquipamentos.TabIndex = 4;
+            this.btnInfoEquipamentos.Text = " Informações de Equipamentos";
+            this.btnInfoEquipamentos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInfoEquipamentos.UseVisualStyleBackColor = true;
+            this.btnInfoEquipamentos.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnScanearRede
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::ICT___InternetConnectionTest.Properties.Resources.procurar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 166);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(234, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "        Scanear Rede";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnScanearRede.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnScanearRede.FlatAppearance.BorderSize = 0;
+            this.btnScanearRede.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnScanearRede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScanearRede.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScanearRede.ForeColor = System.Drawing.Color.White;
+            this.btnScanearRede.Image = global::ICT___InternetConnectionTest.Properties.Resources.procurar;
+            this.btnScanearRede.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScanearRede.Location = new System.Drawing.Point(0, 166);
+            this.btnScanearRede.Name = "btnScanearRede";
+            this.btnScanearRede.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnScanearRede.Size = new System.Drawing.Size(234, 40);
+            this.btnScanearRede.TabIndex = 3;
+            this.btnScanearRede.Text = "        Scanear Rede";
+            this.btnScanearRede.UseVisualStyleBackColor = true;
+            this.btnScanearRede.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnMonitoramento
             // 
@@ -207,19 +231,20 @@
             this.btnMonitoramento.UseVisualStyleBackColor = true;
             this.btnMonitoramento.Click += new System.EventHandler(this.btnMonitoramento_Click);
             // 
-            // pictureBox1
+            // pictureBoxImgUser
             // 
-            this.pictureBox1.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImgUser.Image = global::ICT___InternetConnectionTest.Properties.Resources.User;
+            this.pictureBoxImgUser.Location = new System.Drawing.Point(5, 12);
+            this.pictureBoxImgUser.Name = "pictureBoxImgUser";
+            this.pictureBoxImgUser.Size = new System.Drawing.Size(65, 65);
+            this.pictureBoxImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImgUser.TabIndex = 0;
+            this.pictureBoxImgUser.TabStop = false;
             // 
             // pnlBarraTitulo
             // 
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlBarraTitulo.Controls.Add(this.pictureBox3);
             this.pnlBarraTitulo.Controls.Add(this.lblData);
             this.pnlBarraTitulo.Controls.Add(this.lblHora);
             this.pnlBarraTitulo.Controls.Add(this.btnMinimizar);
@@ -234,6 +259,19 @@
             this.pnlBarraTitulo.Size = new System.Drawing.Size(1066, 50);
             this.pnlBarraTitulo.TabIndex = 1;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(715, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // lblData
             // 
@@ -337,25 +375,25 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.pnlPrincipal.Controls.Add(this.pictureBox2);
+            this.pnlPrincipal.Controls.Add(this.pictureBoxLogo);
             this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPrincipal.Location = new System.Drawing.Point(234, 50);
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(1066, 600);
             this.pnlPrincipal.TabIndex = 2;
             // 
-            // pictureBox2
+            // pictureBoxLogo
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::ICT___InternetConnectionTest.Properties.Resources.ICT_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(447, 188);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxLogo.Image = global::ICT___InternetConnectionTest.Properties.Resources.ICT_Logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(447, 188);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // dataEHora
             // 
@@ -377,16 +415,17 @@
             this.Text = "Gerenciar";
             this.pnlMenuVertical.ResumeLayout(false);
             this.pnlMenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImgUser)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
             this.pnlBarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             this.pnlPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,24 +436,26 @@
         private System.Windows.Forms.Panel pnlBarraTitulo;
         private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Button btnMonitoramento;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInfoEquipamentos;
+        private System.Windows.Forms.Button btnScanearRede;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEncerrarCessao;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxImgUser;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblPermissao;
         private System.Windows.Forms.LinkLabel linkLabelUserPerfil;
         private System.Windows.Forms.PictureBox btnSlide;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnEncerrar;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer dataEHora;
+        private System.Windows.Forms.Button btnGerenciarEquipamentos;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

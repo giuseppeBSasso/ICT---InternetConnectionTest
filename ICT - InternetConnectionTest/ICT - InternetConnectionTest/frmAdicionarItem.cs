@@ -15,7 +15,6 @@ namespace ICT___InternetConnectionTest
     public partial class frmAdicionarItem : Form
     {
         DevicesModel objetoDM = new DevicesModel();
-
         public frmAdicionarItem()
         {
             InitializeComponent();
@@ -26,10 +25,10 @@ namespace ICT___InternetConnectionTest
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam); 
 
-        //Metodo para inserir informações no Banco de Dados
+        //Metodo para checar o inserir informações no Banco de Dados
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (textBoxIP.Text == "")
+            if (txtIP.Text == "")
             {
                 MessageBox.Show("Favor informe os dados!");
             }
@@ -37,7 +36,7 @@ namespace ICT___InternetConnectionTest
             {
                 try
                 {
-                    objetoDM.InserirDados(textBoxIP.Text, textBoxDescricao.Text, txtCategoria.Text);
+                    objetoDM.InserirDados(txtIP.Text, txtDescricao.Text, txtCategoria.Text);
                     MessageBox.Show("Dados cadastrados com sucesso!");
                     LimparFrm();
                     //Atualizar dados do datagridview
@@ -62,8 +61,8 @@ namespace ICT___InternetConnectionTest
 
         private void LimparFrm()
         {
-            textBoxDescricao.Clear();
-            textBoxIP.Clear();
+            txtDescricao.Clear();
+            txtIP.Clear();
             txtCategoria.Clear();
             txtid.Clear();
         }

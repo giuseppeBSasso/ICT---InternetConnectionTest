@@ -26,8 +26,8 @@ namespace ICT___InternetConnectionTest
             //Controle de permissões 
             if (UserLoginCache.Position == Positions.Visitante)
             {
-                button2.Enabled = false;
-                button3.Enabled = false;
+                btnScanearRede.Enabled = false;
+                btnInfoEquipamentos.Enabled = false;
             }
             if (UserLoginCache.Position == Positions.Administrador)
             {
@@ -65,7 +65,7 @@ namespace ICT___InternetConnectionTest
 
         private void LoadUserData()
         {
-            lblPosition.Text = UserLoginCache.Position;
+            lblPermissao.Text = UserLoginCache.Position;
             lblName.Text = UserLoginCache.FirstName;
             lblEmail.Text = UserLoginCache.Email;
         }
@@ -133,6 +133,17 @@ namespace ICT___InternetConnectionTest
         private void button3_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(obj);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var recoverPassword = new frmSobreICT();
+            recoverPassword.ShowDialog();
+        }
+
+        private void btnGerenciarEquipamentos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new frmGerenciarEquipamentos());
         }
     }
 }

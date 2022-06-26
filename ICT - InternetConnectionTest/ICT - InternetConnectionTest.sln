@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B6DEEFA6-E248-4767-9387-91436EF12C58}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "saidaConsole", "..\..\..\..\Desktop\OUTROS\1 - Documentos diversos\projetos em c#\informações de adptadores de rede\saidaConsole\saidaConsole.vbproj", "{546484AE-6433-4759-ACCD-EA7DAAB0FE37}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ColetaInfo", "..\..\..\..\Desktop\OUTROS\1 - Documentos diversos\projetos em c#\informações de adptadores de rede\saidaConsole\ColetaInfo.vbproj", "{546484AE-6433-4759-ACCD-EA7DAAB0FE37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
