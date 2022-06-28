@@ -27,7 +27,7 @@ namespace ICT___InternetConnectionTest
             if (UserLoginCache.Position == Positions.Visitante)
             {
                 btnScanearRede.Enabled = false;
-                btnInfoEquipamentos.Enabled = false;
+                btnGerenciarEquipamentos.Enabled = false;
             }
             if (UserLoginCache.Position == Positions.Administrador)
             {
